@@ -1,0 +1,14 @@
+<p>cab-list-with-place works!</p> 
+
+<div class="view-toggle">
+  <label>
+    <input type="radio" name="view" [checked]="!showInTable" (change)="toggleView('card')" />
+    Card View
+  </label>
+  <label>
+    <input type="radio" name="view" [checked]="showInTable" (change)="toggleView('table')" />
+    Table View
+  </label>
+</div>
+
+<app-cab-list [cabList]="cabList"  [extraButtonConfig]="extraButtonConfig" [showInTable]="showInTable"></app-cab-list>

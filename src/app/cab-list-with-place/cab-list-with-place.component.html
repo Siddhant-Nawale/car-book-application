@@ -1,0 +1,16 @@
+<p>cab-list-with-place works!</p>
+Place Name : <input #placeName />
+<button (click)="fetchData(placeName.value)">Fetch</button>
+
+<div class="view-toggle">
+  <label>
+    <input type="radio" name="view" [checked]="!showInTable" (change)="toggleView('card')" />
+    Card View
+  </label>
+  <label>
+    <input type="radio" name="view" [checked]="showInTable" (change)="toggleView('table')" />
+    Table View
+  </label>
+</div>
+
+<app-cab-list [cabList]="cabList"  [showInTable]="showInTable"></app-cab-list>

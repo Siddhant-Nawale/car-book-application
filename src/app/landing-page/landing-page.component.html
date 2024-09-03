@@ -1,0 +1,28 @@
+<div class="landing-page">
+    <div class="hero">
+        <h1>Welcome to the Cab Management System</h1>
+        <p>Your ultimate tool for efficient cab management and booking.</p>
+    </div>
+
+    <div class="user-role">
+        <label>
+            <input type="radio" name="userRole" value="admin" [(ngModel)]="userRole" /> Admin
+        </label>
+        <label>
+            <input type="radio" name="userRole" value="normal" [(ngModel)]="userRole" /> Normal User
+        </label>
+    </div>
+
+    <div class="nav-links">
+        <div class="admin-links" *ngIf="userRole === 'admin' || !userRole">
+            <a routerLink="/cab-list" class="nav-link">Cab List</a>
+            <a routerLink="/booked-cab-list" class="nav-link">Booked Cab List</a>
+            <a routerLink="/available-cab-list" class="nav-link">Available Cab List</a>
+            <a routerLink="/cab-list-with-place" class="nav-link">Cab List with Place</a>
+            <a routerLink="/add-cab" class="nav-link">Add Cab</a>
+        </div>
+        <div class="user-links" *ngIf="userRole === 'normal' || !userRole">
+            <a routerLink="/book-cab" class="nav-link">Book Cab</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div>
+  <h2>Add New Cab</h2>
+  <form [formGroup]="addCabForm" (ngSubmit)="addCab()">
+    <div>
+      <label for="route">Route:</label>
+      <input type="text" id="route" formControlName="route" required>
+    </div>
+    <div>
+      <label for="nextAvailableAt">Next Available At:</label>
+      <input type="text" id="nextAvailableAt" formControlName="nextAvailableAt" required>
+    </div>
+    <div>
+      <label for="numberOfSeatsBooked">Number of Seats Booked:</label>
+      <input type="number" id="numberOfSeatsBooked" formControlName="numberOfSeatsBooked" required>
+    </div>
+    <button type="submit" [disabled]="isLoading">Add Cab</button>
+  </form>
+</div>

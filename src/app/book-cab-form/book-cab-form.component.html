@@ -1,0 +1,18 @@
+<div class="book-cab-form-container">
+  <h2>Book Cab</h2>
+  <form (ngSubmit)="bookCab()">
+    <app-cab-details [cabNo]="cabNo"></app-cab-details>
+    <div>
+      <label for="numOfSeats">Number of Seats:</label>
+      <input type="number" id="numOfSeats" [(ngModel)]="numOfSeats" name="numOfSeats" (change)="onSeatsChange()" required>
+    </div>
+    <div *ngIf="numOfSeats > 0">
+      <label>Employee Numbers:</label>
+      <div *ngIf="isArray(EmployeeNumbers)"><div  *ngFor="let _ of EmployeeNumbers; let index = index">
+        <input type="number" [(ngModel)]="EmployeeNumbers[index]" name="EmployeeNumber{{index}}" required>
+      </div>
+    </div>
+    </div>
+    <button type="submit" [disabled]="isLoading">Book Cab</button>
+  </form>
+</div>

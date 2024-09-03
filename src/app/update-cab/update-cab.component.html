@@ -1,0 +1,19 @@
+<div *ngIf="isLoading">Loading...</div>
+<div *ngIf="cab && !isLoading">
+  <h2>Update Cab</h2>
+  <form (ngSubmit)="updateCab()">
+    <label for="cabNo">Cab No:</label>
+    <input id="cabNo" [(ngModel)]="cab.cabNo" name="cabNo" disabled />
+
+    <label for="route">Route:</label>
+    <input id="route" [(ngModel)]="cab.route" name="route" required />
+
+    <label for="nextAvailableAt">Next Available At:</label>
+    <input id="nextAvailableAt" [(ngModel)]="cab.nextAvailableAt" name="nextAvailableAt" required />
+
+    <label for="numberOfSeatsBooked">Seats Booked:</label>
+    <input id="numberOfSeatsBooked" [(ngModel)]="cab.numberOfSeatsBooked" name="numberOfSeatsBooked" type="number" required />
+
+    <button type="submit">Update</button>
+  </form>
+</div>

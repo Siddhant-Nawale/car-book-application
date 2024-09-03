@@ -1,0 +1,80 @@
+.book-cab-form-container {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f0f8ff, #e6f7ff); /* Light gradient background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+   
+  .book-cab-form-container h2 {
+    text-align: center;
+    color: #004085; /* Darker blue for the title */
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+   
+  .book-cab-form-container .cab-details {
+    background-color: #ffffff; /* White background for better readability */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+   
+  .book-cab-form-container .cab-details p {
+    margin: 0;
+    color: #333333; /* Darker text color */
+    font-size: 16px;
+  }
+   
+  .book-cab-form-container .cab-details strong {
+    color: #000000; /* Stronger contrast for emphasis */
+    font-weight: bold;
+  }
+   
+  .book-cab-form-container div {
+    margin-bottom: 20px;
+  }
+   
+  .book-cab-form-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #495057;
+    font-size: 14px;
+  }
+   
+  .book-cab-form-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #495057;
+  }
+   
+  .book-cab-form-container input::placeholder {
+    color: #6c757d;
+  }
+   
+  .book-cab-form-container button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+   
+  .book-cab-form-container button:disabled {
+    background-color: #cccccc;
+  }
+   
+  .book-cab-form-container button:not(:disabled):hover {
+    background-color: #218838; /* Slightly darker green on hover */
+  }
